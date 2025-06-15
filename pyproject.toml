@@ -1,0 +1,21 @@
+[project]
+name = "doubao-mcp-server"
+version = "0.0.3"
+description = "主要实现的是火山引擎的提供的豆包文生图、文生视频、图生视频MCP-Server"
+authors = [
+    {name = "wwzhouhui",email = "75271002@qq.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.9.4", # 添加requests依赖
+    "requests>=2.31.0",
+    "openai>=1.86.0",
+]
+
+[project.scripts]
+doubao-mcp-server = "doubao_mcp_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
