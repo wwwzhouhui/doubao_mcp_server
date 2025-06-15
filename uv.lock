@@ -87,7 +87,7 @@ wheels = [
 
 [[package]]
 name = "doubao-mcp-server"
-version = "0.1.1"
+version = "0.0.3"
 source = { editable = "." }
 dependencies = [
     { name = "mcp", extra = ["cli"] },

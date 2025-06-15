@@ -68,7 +68,9 @@ uvx doubao-mcp-server
 #### **Cherry Studio配置**
 
 1. 打开 Cherry Studio
+
 2. 进入 **设置 → MCP Servers → 添加服务器**
+
 3. 配置参数：
    - **名称**: `doubao-mcp-server`
    - **描述**: `豆包AI生成服务`
@@ -76,7 +78,18 @@ uvx doubao-mcp-server
    - **命令**: `uvx`
    - **参数**: `doubao-mcp-server`
    - **环境变量**: `DOUBAO_API_KEY=your-api-key-here`
+   
 4. 点击保存并启用
+
+   详细图解
+
+   ![image-20250615165107667](https://mypicture-1258720957.cos.ap-nanjing.myqcloud.com/Obsidian/image-20250615165107667.png)
+
+![image-20250615165205135](https://mypicture-1258720957.cos.ap-nanjing.myqcloud.com/Obsidian/image-20250615165205135.png)
+
+配置好后，可以检查到工具有哪些
+
+![image-20250615165249803](https://mypicture-1258720957.cos.ap-nanjing.myqcloud.com/Obsidian/image-20250615165249803.png)
 
 #### **Claude Desktop配置**
 
@@ -205,7 +218,17 @@ uvx doubao-mcp-server
 首先使用encode_image_to_base64将图片编码，然后使用image_to_video生成视频
 ```
 
-*注：具体的使用效果截图和输出示例待补充*
+  图解案例（文生生图）
+
+  ![image-20250615165711353](https://mypicture-1258720957.cos.ap-nanjing.myqcloud.com/Obsidian/image-20250615165711353.png)
+
+文生视频
+
+![image-20250615165906609](https://mypicture-1258720957.cos.ap-nanjing.myqcloud.com/Obsidian/image-20250615165906609.png)
+
+生成的视频
+
+![image-20250615170034340](https://mypicture-1258720957.cos.ap-nanjing.myqcloud.com/Obsidian/image-20250615170034340.png)
 
 ## 注意事项
 
