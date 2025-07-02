@@ -2,6 +2,7 @@
 import time
 import base64
 import requests
+import os
 import asyncio
 from typing import Any, Dict, Optional, Union
 from openai import OpenAI
@@ -15,23 +16,26 @@ API_KEY = None
 BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
 
 def initialize_client():
+    # 优先从环境变量加载 API_KEY
+    API_KEY = os.getenv("DOUBAO_API_KEY")
     """初始化OpenAI客户端"""
     if not API_KEY:
         raise ValueError("API key is required")
     return OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
-@mcp.tool()
-def set_api_key(api_key: str) -> str:
-    """设置豆包API密钥"""
-    global API_KEY
-    API_KEY = api_key
-    return "API密钥设置成功"
+# @mcp.tool()
+# def set_api_key(api_key: str) -> str:
+#     """设置豆包API密钥"""
+#     global API_KEY
+#     API_KEY = api_key
+#     return "API密钥设置成功"
 
 @mcp.tool()
 def text_to_image(
     prompt: str, 
     size: str = "1024x1024", 
-    model: str = "doubao-seedream-3-0-t2i-250415"
+    model: str = "doubao-seedream-3-0-t2i-250415",
+   # watermark: bool = False
 ) -> Dict[str, Any]:
     """
     文生图功能 - 根据文本描述生成图片
@@ -40,7 +44,6 @@ def text_to_image(
         prompt: 图片描述提示词
         size: 图片尺寸，格式为"宽x高"，如"1024x1024"
         model: 使用的模型名称
-    
     Returns:
         包含图片URL或错误信息的字典
     """
@@ -52,7 +55,7 @@ def text_to_image(
             "prompt": prompt,
             "size": size,
             "response_format": "url",
-            "n": 1,
+            "n": 1
         }
         
         response = client.images.generate(**params)

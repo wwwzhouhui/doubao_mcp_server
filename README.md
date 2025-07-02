@@ -253,6 +253,11 @@ uvx doubao-mcp-server
 uvx doubao-mcp-server --verbose
 ```
 
+##  更新说明
+
+ 2025年6月29日-version 0.0.1：初始版本发布，支持文生图、文生视频、图生视频功能。
+
+ 2025年6月29日-version 0.0.4：去掉set_api_key mcp_tool 工具，方便用户使用，使用DOUBAO_API_KEY 参数赋值
 
 ## 项目信息
 
@@ -260,7 +265,7 @@ uvx doubao-mcp-server --verbose
 
 **作者**: wwzhouhui - [75271002@qq.com](mailto:75271002@qq.com)
 
-**版本**: v0.1.0
+**版本**: v0.0.1
 
 - 初始版本发布
 - 支持文生图、文生视频、图生视频功能

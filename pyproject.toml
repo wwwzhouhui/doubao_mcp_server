@@ -1,6 +1,6 @@
 [project]
 name = "doubao-mcp-server"
-version = "0.0.3"
+version = "0.0.4"
 description = "主要实现的是火山引擎的提供的豆包文生图、文生视频、图生视频MCP-Server"
 authors = [
     {name = "wwzhouhui",email = "75271002@qq.com"}
